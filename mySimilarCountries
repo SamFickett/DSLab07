@@ -1,0 +1,40 @@
+package Lab7;
+
+import java.util.List;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class mySimilarCountries implements ISimilarCountries{
+
+	public TreeMap<String, List<String>> getSimilarCountries(TreeMap<String, TreeSet<String>> countryFoodSet)
+	{
+		TreeMap<String, List<String>> countrySet = new TreeMap<>();
+		int count; 
+		for(String country: countryFoodSet.keySet())
+		{
+			for(String country2: countryFoodSet.keySet())
+			{
+				countrySet.put(country, new List<String>());
+				if(country.equals(country2))
+				{
+					 count = 0; 
+				}
+				else
+				{
+					count =0;
+					for(String food: countryFoodSet.get(country))
+					{
+						for(String food2: countryFoodSet.get(country2))
+								{
+									food2.equals(food);
+									count++;
+									
+								}
+						
+					}
+				}
+			}
+			countryFoodSet.get(country).)
+		}
+	}
+}
